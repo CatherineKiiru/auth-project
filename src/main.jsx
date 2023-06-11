@@ -1,20 +1,21 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import ErrorPage from './error-page';
-
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from './routes/root';
-
+import Dashboard from "./routes/Dashboard"
+import Preferences from "./routes/Preferences"
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />
+    path: "/dashboard",
+    element: <Dashboard />,
+  },
+  {
+    path: "/preferences",
+    element: <Preferences />
   }
 ])
 
